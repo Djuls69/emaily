@@ -19,7 +19,8 @@ passport.use(
       clientID,
       clientSecret,
       callbackURL: '/auth/google/callback',
-      passReqToCallback: true
+      passReqToCallback: true,
+      proxy: true
     },
     async (request, accessToken, refreshToken, profile, done) => {
       try {
