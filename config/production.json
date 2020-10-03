@@ -1,0 +1,6 @@
+{
+  "googleClientId": "850796019802-0de5qg8n02uht5nnquv6r1ri1mm4gans.apps.googleusercontent.com",
+  "googleClientSecret": "2R5yXSaDjnGyXUlPXDVOK2bu",
+  "mongoURI": "mongodb+srv://falkdev:h8QCTtGOynW38aES@emaily-dev.bunbb.mongodb.net/collections?retryWrites=true&w=majority",
+  "cookieKey": "HSFbuXhPlfiOSaVdSnE1"
+}

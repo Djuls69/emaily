@@ -1,12 +1,22 @@
 const express = require('express')
+const passport = require('passport')
+require('./services/passport')
+require('./config/db')()
+const cookieSession = require('cookie-session')
+const config = require('config')
 
 const app = express()
-
 app.use(express.json())
+app.use(
+  cookieSession({
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    keys: [config.get('cookieKey')]
+  })
+)
+app.use(passport.initialize())
+app.use(passport.session())
 
-app.get('/', (req, res) => {
-  res.json({ hi: 'there' })
-})
+require('./routes/authRoute')(app)
 
 const PORT = process.env.PORT || 5000
 
