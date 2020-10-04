@@ -17,6 +17,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 require('./routes/authRoute')(app)
+require('./routes/billingRoute')(app)
 
 const PORT = process.env.PORT || 5000
 

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { logout } from '../../redux/actions/userActions'
 import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
+import Payments from '../payments/Payments'
 
 const Header = ({ auth, logout, history }) => {
   const renderContent = () => {
@@ -15,7 +16,17 @@ const Header = ({ auth, logout, history }) => {
           </li>
         )
       default:
-        return <li onClick={() => logout(history)}>Se déconnecter</li>
+        return (
+          <Fragment>
+            <li>
+              <Payments />
+            </li>
+            <li style={{ margin: '0 10px' }}>Crédits: {auth.credits}</li>
+            <li onClick={() => logout(history)}>
+              <a href='#!'>Se déconnecter</a>
+            </li>
+          </Fragment>
+        )
     }
   }
 
