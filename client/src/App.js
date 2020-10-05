@@ -4,6 +4,8 @@ import { fetchUser } from './redux/actions/userActions'
 import { connect } from 'react-redux'
 import Header from './components/header/Header'
 import Landing from './components/landing/Landing'
+import Dashboard from './components/dashboard/Dashboard'
+import SurveyNew from './components/surveys/SurveyNew'
 
 const App = ({ fetchUser }) => {
   useEffect(() => {
@@ -16,8 +18,8 @@ const App = ({ fetchUser }) => {
       <div className='container'>
         <Switch>
           <Route exact path='/' component={Landing} />
-          <Route exact path='/surveys' component={() => <h2>Dahsboard</h2>} />
-          <Route exact path='/surveys/new' component={() => <h2>Survey New</h2>} />
+          <Route exact path='/surveys' component={Dashboard} />
+          <Route exact path='/surveys/new' component={SurveyNew} />
         </Switch>
       </div>
     </Fragment>
