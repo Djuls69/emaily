@@ -1,9 +1,0 @@
-{
-  "googleClientId": "850796019802-0de5qg8n02uht5nnquv6r1ri1mm4gans.apps.googleusercontent.com",
-  "googleClientSecret": "2R5yXSaDjnGyXUlPXDVOK2bu",
-  "mongoURI": "mongodb+srv://falkdev:h8QCTtGOynW38aES@emaily-dev.bunbb.mongodb.net/collections?retryWrites=true&w=majority",
-  "cookieKey": "HSFbuXhPlfiOSaVdSnE1",
-  "stripePublicKey": "pk_test_51H5W0DH5X3VhhmYl1Lj53QmyfTDC601Nx4bJzrmc9vw5JKn1FxKSlHxCgywx0Ok0rUwez2trVMQp1YEfV90PB6zf00iLHgssWM",
-  "stripeSecretKey": "sk_test_51H5W0DH5X3VhhmYl0ZBwQ2ZjSPIKSWvMhiyjHoFcy4IkaJxLKr3d0muixjwtVMZfBu3ZhXsvpmWAX5mfkp9wT5pq00ZMPaL8Dw",
-  "sendGridKey": "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"
-}
