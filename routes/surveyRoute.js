@@ -8,6 +8,16 @@ const { Path } = require('path-parser')
 const { URL } = require('url')
 
 module.exports = app => {
+  app.get('/api/surveys', auth, async (req, res) => {
+    try {
+      const surveys = await Survey.find({ _user: req.user.id }).select('-recipients')
+      res.send(surveys)
+    } catch (err) {
+      console.log(err.message)
+      return res.status(500).send({ error: 'Erreur serveur' })
+    }
+  })
+
   app.get('/api/surveys/:surveyId/:choice', (req, res) => {
     res.send('Merci pour votre retour!')
   })
