@@ -10,6 +10,7 @@ const Payments = ({ handleToken }) => {
       description='5,00€ pour 5 crédits'
       amount={500}
       currency='EUR'
+      allowRememberMe={false}
       token={token => handleToken(token)}
       stripeKey={process.env.REACT_APP_STRIPE_PUBLIC_KEY}
     >

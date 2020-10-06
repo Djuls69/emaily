@@ -34,7 +34,7 @@ const Header = ({ auth, logout, history }) => {
     <nav>
       <div className='nav-wrapper'>
         <div className='container'>
-          <Link to={!auth ? '/' : '/surveys'} className='brand-logo'>
+          <Link to={!auth ? '/' : '/surveys'} className='brand-logo left'>
             Emaily
           </Link>
           <ul className='right'>{renderContent()}</ul>
